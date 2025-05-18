@@ -6,7 +6,7 @@ def get_book_text(filepath):
         text = f.read()
 
     return text
-
+#hi my love
 from stats import word_count
 from stats import char_count
 from stats import dict_sorter
