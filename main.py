@@ -1,6 +1,11 @@
+import sys
+from stats import word_count
+from stats import char_count
+from stats import dict_sorter
+
 ['main.py', 'books/frankenstein.txt']
 list_length = len(sys.argv)
-if list_length < 2:
+if list_length != 2:
     print("Usage: python3 main.py <path_to_book>")
     sys.exit(1)
 
@@ -12,9 +17,7 @@ def get_book_text(filepath):
 
     return text
 #hi my love
-from stats import word_count
-from stats import char_count
-from stats import dict_sorter
+
 
 def main():
     path = sys.argv[1]
