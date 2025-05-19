@@ -1,4 +1,9 @@
 ['main.py', 'books/frankenstein.txt']
+list_length = len(sys.argv)
+if list_length < 2:
+    print("Usage: python3 main.py <path_to_book>")
+    sys.exit(1)
+
 def get_book_text(filepath):
 
     with open(filepath) as f:
@@ -12,7 +17,7 @@ from stats import char_count
 from stats import dict_sorter
 
 def main():
-    path =""
+    path = sys.argv[1]
     book_text = get_book_text(path)
     num_words = word_count(book_text)
     character_counts = char_count(book_text)
